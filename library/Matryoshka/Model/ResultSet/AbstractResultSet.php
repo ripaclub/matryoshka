@@ -2,7 +2,7 @@
 /**
  * Matryoshka
  *
- * @link        https://github.com/ripaclub/matryoshka
+ * @link        https://github.com/matryoshka-model/matryoshka
  * @copyright   Copyright (c) 2014, Copyright (c) 2014, Ripa Club
  * @license     http://opensource.org/licenses/BSD-2-Clause Simplified BSD License
  */
@@ -151,7 +151,7 @@ abstract class AbstractResultSet implements Iterator, ResultSetInterface
      */
     public function toArray()
     {
-        $return = array();
+        $return = [];
         foreach ($this as $item) {
             if (is_array($item)) {
                 $return[] = $item;

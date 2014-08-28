@@ -2,7 +2,7 @@
 /**
  * Matryoshka
  *
- * @link        https://github.com/ripaclub/matryoshka
+ * @link        https://github.com/matryoshka-model/matryoshka
  * @copyright   Copyright (c) 2014, Leonardo Di Donato <leodidonato at gmail dot com>, Leonardo Grasso <me at leonardograsso dot com>
  * @license     http://opensource.org/licenses/BSD-2-Clause Simplified BSD License
  */
@@ -47,7 +47,7 @@ class FormTest extends \PHPUnit_Framework_TestCase
         $this->user->setFirstName('avisalli');
         $this->user->setSurname('dmlab');
         $this->user->setAge(3);
-        $this->user->setRoles(array( $this->roleCommunity1,  $this->roleCommunity2));
+        $this->user->setRoles([ $this->roleCommunity1,  $this->roleCommunity2]);
 
         $this->form = new AssertUserForm();
         $this->form->bind($this->user);
@@ -82,7 +82,7 @@ class FormTest extends \PHPUnit_Framework_TestCase
         $form->bind($user);
 
         // TODO with parameter in setdata
-        $form->setData(array());
+        $form->setData([]);
 
         $this->assertFalse($form->isValid());
     }

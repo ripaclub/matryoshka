@@ -2,7 +2,7 @@
 /**
  * Matryoshka
  *
- * @link        https://github.com/ripaclub/matryoshka
+ * @link        https://github.com/matryoshka-model/matryoshka
  * @copyright   Copyright (c) 2014, Ripa Club
  * @license     http://opensource.org/licenses/BSD-2-Clause Simplified BSD License
  */
@@ -175,7 +175,7 @@ class ModelAbstractServiceFactory implements AbstractFactoryInterface
         }
 
         if (!$serviceLocator->has('Config')) {
-            $this->config = array();
+            $this->config = [];
             return $this->config;
         }
 
@@ -183,7 +183,7 @@ class ModelAbstractServiceFactory implements AbstractFactoryInterface
         if (!isset($config[$this->configKey])
             || !is_array($config[$this->configKey])
         ) {
-            $this->config = array();
+            $this->config = [];
             return $this->config;
         }
 

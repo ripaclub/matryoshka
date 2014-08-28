@@ -1,4 +1,4 @@
-# Matryoshka [![Build Status](https://travis-ci.org/ripaclub/matryoshka.svg)](https://travis-ci.org/ripaclub/matryoshka)
+# Matryoshka [![Build Status](https://travis-ci.org/matryoshka-model/matryoshka.svg)](https://travis-ci.org/matryoshka-model/matryoshka)
 
 [m&#592;'tr<sup>j</sup>&#629;&#642;k&#601;]
 
@@ -14,28 +14,23 @@ Layers:
 * ModelManager: a dedicated service locator for your model service classes (aka Model)
 * Model: a service class repressenting a collection of entities that provides common features in a centralized way: CRUD, result set, paginating, hydrating, input filtering and more.
 * Criteria: an "user query intefarce" from an API point of view, acting as mediator between model and datagateway.
-* Datagateway: any kind of datagateway, like Zend\Db\TableGateway or MongoCollection. 
+* Datagateway: any kind of datagateway, like Zend\Db\TableGateway or MongoCollection.
 
 
 ## Installation
 
-Since a Matryoshka stable version has not been released yet you have to put
-the Matryoshka repository in your composer.json
+Install it using [composer](http://getcomposer.org).
 
-```json
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/ripaclub/matryoshka.git"
-        }
-    ]
-```
-
-And of course you have to add it to your dependencies.
+Add the following to your `composer.json` file:
 
 ```
-"ripaclub/matryoshka" : "dev-develop"
+"require": {
+    "php": ">=5.4",
+    "matryoshka-model/matryoshka": "~0.1",
+}
 ```
 
-[![Analytics](https://ga-beacon.appspot.com/UA-49655829-1/ripaclub/matryoshka)](https://github.com/igrigorik/ga-beacon)
+---
+
+[![Analytics](https://ga-beacon.appspot.com/UA-49655829-1/matryoshka-model/matryoshka)](https://github.com/igrigorik/ga-beacon)
 

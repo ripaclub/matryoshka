@@ -2,7 +2,7 @@
 /**
  * Matryoshka
  *
- * @link        https://github.com/ripaclub/matryoshka
+ * @link        https://github.com/matryoshka-model/matryoshka
  * @copyright   Copyright (c) 2014, Ripa Club
  * @license     http://opensource.org/licenses/BSD-2-Clause Simplified BSD License
  */
@@ -14,7 +14,7 @@ namespace MatryoshkaTest\Model\TestAsset\ArrayGateway;
  */
 class ArrayGateway
 {
-    protected $data = array();
+    protected $data = [];
 
     protected function testCriteria(array $criteria, array $element)
     {
@@ -29,7 +29,7 @@ class ArrayGateway
 
     public function find(array $criteria)
     {
-        $return = array();
+        $return = [];
         foreach ($this->data as $element) {
             if ($this->testCriteria($criteria, $element)) {
                 $return[] = $element;

@@ -2,7 +2,7 @@
 /**
  * Matryoshka
  *
- * @link        https://github.com/ripaclub/matryoshka
+ * @link        https://github.com/matryoshka-model/matryoshka
  * @copyright   Copyright (c) 2014, Ripa Club
  * @license     http://opensource.org/licenses/BSD-2-Clause Simplified BSD License
  */
@@ -46,7 +46,7 @@ class HydratingResultSet extends AbstractResultSet implements HydratorAwareInter
             $hydrator = $objectPrototype->getHydrator();
         }
         $this->setHydrator(($hydrator) ?: new ArraySerializable);
-        $this->setObjectPrototype(($objectPrototype) ?: new ArrayObject(array(), ArrayObject::ARRAY_AS_PROPS));
+        $this->setObjectPrototype(($objectPrototype) ?: new ArrayObject([], ArrayObject::ARRAY_AS_PROPS));
     }
 
     /**
@@ -128,7 +128,7 @@ class HydratingResultSet extends AbstractResultSet implements HydratorAwareInter
      */
     public function toArray()
     {
-        $return = array();
+        $return = [];
         foreach ($this as $item) {
             $return[] = $this->getHydrator()->extract($item);
         }

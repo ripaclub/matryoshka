@@ -2,7 +2,7 @@
 /**
  * Matryoshka
  *
- * @link        https://github.com/ripaclub/matryoshka
+ * @link        https://github.com/matryoshka-model/matryoshka
  * @copyright   Copyright (c) 2014, Ripa Club
  * @license     http://opensource.org/licenses/BSD-2-Clause Simplified BSD License
  */
@@ -15,7 +15,7 @@ class ToArrayObject
 {
     protected $data;
 
-    public function __construct($data = array())
+    public function __construct($data = [])
     {
         $this->data = $data;
     }

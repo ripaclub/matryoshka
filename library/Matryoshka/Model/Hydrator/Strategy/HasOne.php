@@ -2,7 +2,7 @@
 /**
  * Matryoshka
  *
- * @link        https://github.com/ripaclub/matryoshka
+ * @link        https://github.com/matryoshka-model/matryoshka
  * @copyright   Copyright (c) 2014, Ripa Club
  * @license     http://opensource.org/licenses/BSD-2-Clause Simplified BSD License
  */
@@ -48,7 +48,7 @@ class HasOne implements StrategyInterface
     public function extract($value)
     {
         if (null === $value) {
-            return array();
+            return [];
         }
 
         if (is_array($value)) {
